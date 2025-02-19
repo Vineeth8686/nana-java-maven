@@ -8,7 +8,7 @@
     <artifactId>java-maven-app</artifactId>
     <version>1.1.0-SNAPSHOT</version>
 
-    <build>
+    <build> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -45,9 +45,10 @@
             </plugin>
         </plugins>
     </build>
+
     <distributionManagement>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
+            <id>nexus-snapshorts</id>
             <url>http://54.158.121.28:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
