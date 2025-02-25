@@ -18,6 +18,7 @@ pipeline{
                     withCredentials([usernamePassword(credentialsId: 'docker-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                 sh """echo "${PASS}"| docker login -u ${USER} --password-stdin"""
                 sh "docker build -t vineeth8686/demo-appp:jma-2.0 ."
+                sh "docker push vineeth8686/demo-appp:jma-2.0"
 
                 }
             }
@@ -28,6 +29,8 @@ pipeline{
                 script{
 
                     echo "deploying the application"
+                    sh "docker run --rm -dit --name javapp -p 8081:8080 vineeth8686/demo-appp:jma-2.0"
+
 
                 }
             }
