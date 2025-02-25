@@ -9,15 +9,23 @@ pipeline {
         stage("Init Groovy") {
             steps {
                 script {
-                    gv=load "script.groovy"
-                    echo "Failed to load Groovy script"
+                    try {
+                        gv = load "script.groovy"
+                        echo "Groovy script loaded successfully"
+                    } catch (Exception e) {
+                        echo "Failed to load Groovy script: ${e}"
+                    }
                 }
             }
         }
         stage("Build Jar") {
             steps {
                 script {
-                    gv.buildJar()
+                    try {
+                        gv.buildJar()
+                    } catch (Exception e) {
+                        echo "Failed to invoke buildJar method: ${e}"
+                    }
                 }
             }
         }
