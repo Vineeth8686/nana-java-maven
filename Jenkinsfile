@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        gv = load "script.groovy"
+                        gv = load "script.groovys"
                         echo "Groovy script loaded successfully"
                     } catch (Exception e) {
                         echo "Failed to load Groovy script: ${e}"
