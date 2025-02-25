@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    tool name: 'mvn-1', type: 'maven'
+    tool {name: 'mvn-1', type: 'maven'}
     stages{
         stage("build jar"){
             steps{
