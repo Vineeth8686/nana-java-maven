@@ -10,11 +10,22 @@ pipeline{
                 }
             }
         }
-
+         stage("build image"){
+            steps{
+                script{
+                    
+                    echo "building the docker image"
+                    withCredentials([usernamePassword(credentialsId: 'docker-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                sh """echo "${PASS}"| docker login -u ${USER} --password-stdin"""
+                }
+            }
+        }
         stage("deploy"){
             steps{
                 script{
+
                     echo "deploying the application"
+
                 }
             }
         }
