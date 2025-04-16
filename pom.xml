@@ -53,8 +53,8 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>nexus-snapshorts</id>
-            <url>http://54.158.121.28:8081/repository/maven-snapshots/</url>
+            <id>nana</id>
+            <url>http://52.241.7.135:8081/repository/nana/</url>
         </snapshotRepository>
     </distributionManagement>
 
