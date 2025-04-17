@@ -53,13 +53,13 @@
 
     <distributionManagement>
           <repository>
-            <id>nexus-release</id>
-            <url>http://52.241.7.135:8081/repository/nana/</url>
+            <id>nana-release</id>
+            <url>http://20.66.99.35:8081/repository/maven-releases/</url>
         </repository>
 
         <snapshotRepository>
-            <id>nana</id>
-            <url>http://52.241.7.135:8081/repository/nana/</url>
+            <id>nana-snapshort</id>
+            <url>http://20.66.99.35:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
